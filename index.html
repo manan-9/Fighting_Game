@@ -1,0 +1,64 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        *{
+            /* to not let padding change width of elements */
+            box-sizing: border-box;
+            font-family: 'Press Start 2P', cursive;
+        }
+    </style>
+</head>
+<body>
+    <div style="position: relative;display:inline-block;">
+        <!-- absolute takes it out of document flow -->
+        <div style="position: absolute;display: flex;width:100%;align-items: center;padding: 20px;">
+            <!-- player health -->
+            <div style="position: relative;width:100%;display: flex;justify-content: flex-end;border-top:4px solid wheat;border-left:4px solid wheat;border-bottom:4px solid wheat">
+                <div style="background-color: red;height: 30px;width:100%"></div>
+                <div id="playerhealth" style="
+                    position: absolute;background-color: #818cf8;
+                    top:0;bottom:0;;right:0;width:100%;">
+                </div>
+            </div>
+            <!-- timer -->
+            <div id="timer" style="
+                background-color: rgb(53, 51, 51);
+                width: 100px;
+                height: 50px;
+                color:white;
+                border:4px solid wheat;
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;">
+                10
+            </div>
+            <!-- enemy health -->
+            <div style="position: relative;width:100%;border-top:4px solid wheat;border-right:4px solid wheat;border-bottom:4px solid wheat;">
+                <div style="background-color: red;height: 30px;"></div>
+                <div id="enemyhealth"
+                    style="position: absolute;
+                    background-color: #818cf8;
+                    top:0;bottom:0;left:0;right:0"></div>
+            </div>
+        </div>            
+        <div id="display" style="
+            position:absolute;
+            color:white;
+            align-items: center;
+            justify-content: center;
+            top: 0;bottom: 0;left: 0;right: 0;
+            display:none;
+            ">
+        Tie
+        </div>  
+        <canvas></canvas>
+    </div>
+    <!-- improting gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/classes.js"></script>
+    <script src="index.js"></script>
+</body>
